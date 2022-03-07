@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.dtf.Home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_todayFragment"
+            app:destination="@id/todayFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_photoHistoryFragment"
+            app:destination="@id/photoHistoryFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/MLActivity"
+        android:name="com.example.dtf.MLActivity"
+        android:label="activity_mlactivity"
+        tools:layout="@layout/activity_mlactivity"/>
+    <fragment
+        android:id="@+id/photoHistoryFragment"
+        android:name="com.example.dtf.PhotoHistory.PhotoHistoryFragment"
+        android:label="fragment_photo_history"
+        tools:layout="@layout/fragment_photo_history" >
+        <action
+            android:id="@+id/action_photoHistoryFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.dtf.Settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/todayFragment"
+        android:name="com.example.dtf.FaceTouchesToday.TodayFragment"
+        android:label="fragment_today"
+        tools:layout="@layout/fragment_today" >
+        <action
+            android:id="@+id/action_todayFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
